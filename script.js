@@ -79,9 +79,9 @@ function formatdate(epochTime) {
 }
 
 function formatTime(epochTime) {
-    let date = new Date(epochTime * 1000);
+    date= new Date(epochTime * 1000);
     let hours = date.getHours();
-    let minutes = date.getMinutes();
+    let minutes =('0'+date.getMinutes()).slice(-2);
 
     return `${hours}:${minutes}`;
 }
